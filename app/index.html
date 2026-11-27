@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Sleuth — Real Black Friday 2026 Deals, Checked by Hand</title>
+<meta name="description" content="39 real Black Friday 2026 deals, each price checked at its store on 27 Nov 2026, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Black Friday 2026 &middot; Friday 27 November &middot; prices checked this morning</p>
+    <h1>Deal Sleuth</h1>
+    <p class="tagline">Every price on this page was read at its store — or in a deals source that names the store — on 27&nbsp;November&nbsp;2026. No inflated &ldquo;was&rdquo; prices. No fake deals. Each deal carries an honest verdict.</p>
+    <div class="stats" id="stats" aria-label="Deal statistics"></div>
+  </div>
+</header>
+
+<main class="wrap" id="app">
+  <section class="controls" aria-label="Find a deal">
+    <input id="q" type="search" placeholder="Search deals, stores, categories&hellip;" autocomplete="off" aria-label="Search deals">
+    <div class="chips" id="cats" role="group" aria-label="Filter by category"></div>
+    <div class="row">
+      <label>Store
+        <select id="store"><option value="">All stores</option></select>
+      </label>
+      <label>Discount
+        <select id="minoff">
+          <option value="0">Any discount</option>
+          <option value="25">25% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort">
+          <option value="off">Biggest discount first</option>
+          <option value="save">Biggest saving first</option>
+          <option value="price">Lowest price first</option>
+          <option value="price-desc">Highest price first</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="lows"> New lows only</label>
+    </div>
+  </section>
+
+  <p class="count" id="count" aria-live="polite"></p>
+  <section class="grid" id="grid" aria-label="Deals"></section>
+  <section class="detail" id="detail" hidden></section>
+
+  <section class="method">
+    <h2>How we check a deal</h2>
+    <ol>
+      <li><strong>Read the price.</strong> The sale price and the usual price are read at the store itself, or in a deals source that names the store. The source is printed on every deal.</li>
+      <li><strong>Check the &ldquo;was&rdquo;.</strong> A discount only counts against the price the store actually charged — not a list price nobody paid. Where a source flagged an inflated list price, we say so.</li>
+      <li><strong>Ask if it is really a deal.</strong> <span class="v v-low">NEW LOW</span> means a source confirms the lowest price ever recorded. <span class="v v-strong">STRONG DEAL</span> is 40% off or more. <span class="v v-solid">SOLID DEAL</span> is 20–39% off. <span class="v v-routine">ROUTINE SALE</span> is under 20% — listed honestly, because a small real cut beats a big fake one.</li>
+      <li><strong>Stamp the time.</strong> Every deal shows when its price was checked. Prices move during Black Friday week — always check the live listing before you buy.</li>
+    </ol>
+    <p class="note">Two deals on this page are routine sales on purpose: the MacBook Pro M6 (11% off) and the Switch 2 bundle (9% off). They are real cuts on products that almost never drop — and the badge says so instead of dressing them up.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Deal Sleuth is an independent deal finder built for the make.fun Black Friday bounty. It is not affiliated with Amazon, Walmart, Best Buy, or any store listed. Prices were checked 27 November 2026, 07:15 UTC, and can change — the store link on each deal goes to the live listing. Cyber Monday deals run through 30 November 2026.</p>
+</footer>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
